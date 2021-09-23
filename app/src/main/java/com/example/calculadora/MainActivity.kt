@@ -9,26 +9,22 @@ import com.example.calculadora.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding  //se declara
+    private lateinit var binding: ActivityMainBinding
     var firsValue: Double = 0.0
     var operator: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater) //se inicializa
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
-        val view = binding.root //llama a Linearlayout (es el que va a estar retornando)
+        val view = binding.root
         setContentView(view)
-        //Para llamar un componente
-        //Se usa binding.el_ID
         binding.btnBorrar.setOnClickListener {
-            //Toast.makeText(this,"test",Toast.LENGTH_LONG).show()
             binding.etCalcu.setText(binding.etCalcu.text.dropLast(1))
         }
 
         binding.btnLimpiar.setOnClickListener {
-            //binding.etCalcu.setText((binding.etCalcu.text.clear()))
             binding.etCalcu.text.clear()
         }
 
@@ -49,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //boton % divide el numero entre 100
         binding.btnPorcentaje.setOnClickListener {
             binding.etCalcu.setText("${binding.etCalcu.text.toString().toDouble() / 100}")
         }
@@ -59,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         val button = view as Button
 
         when(button.id){
-            //Agrega condicional para decimal
             binding.btnPunto.id -> {
                 if (!binding.etCalcu.text.contains('.')) {
                     binding.etCalcu.text.append(".")
@@ -77,7 +73,6 @@ class MainActivity : AppCompatActivity() {
             binding.btnNum9.id -> { binding.etCalcu.text.append("9")}
             else -> {Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT).show() }
         }
-
     }
 
     fun operatorClicked(view: View){
@@ -88,13 +83,9 @@ class MainActivity : AppCompatActivity() {
             binding.btnDivicion.id ->{"Division"}
             binding.btnSuma.id ->{"Suma"}
             binding.btnResta.id ->{"Resta"}
-
             else ->{ "" }
         }
-
         firsValue = binding.etCalcu.text.toString().toDouble()
-
         binding.etCalcu.text.clear()
-
     }
 }

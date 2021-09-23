@@ -14,9 +14,8 @@
     <EditText
         android:id="@+id/etCalcu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="346dp"
         android:textAlignment="textEnd"
-        android:hint="0"
         android:textColor="@color/black"
         android:textSize="30sp" />
 
@@ -40,15 +39,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="#5E5B5B"
-            android:text="DEL"
-            />
+            android:text="->" />
 
         <Button
             android:id="@+id/btn_Porcentaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
+            android:backgroundTint="@color/teal_700"
             android:text="%" />
 
         <Button
@@ -56,9 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="/"
-            android:onClick="operatorClicked" />
+            android:backgroundTint="@color/teal_700"
+            android:onClick="operatorClicked"
+            android:text="/" />
 
     </LinearLayout>
 
@@ -104,9 +102,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="X"
-            android:onClick="operatorClicked" />
+            android:backgroundTint="@color/teal_700"
+            android:onClick="operatorClicked"
+            android:text="X" />
 
     </LinearLayout>
 
@@ -152,9 +150,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="-"
-            android:onClick="operatorClicked" />
+            android:backgroundTint="@color/teal_700"
+            android:onClick="operatorClicked"
+            android:text="-" />
 
     </LinearLayout>
     <LinearLayout
@@ -199,9 +197,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="+"
-            android:onClick="operatorClicked" />
+            android:backgroundTint="@color/teal_700"
+            android:onClick="operatorClicked"
+            android:text="+" />
 
     </LinearLayout>
 
@@ -218,8 +216,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@android:color/darker_gray"
-            android:text="0"
-            android:onClick="presionoBoton" />
+            android:onClick="presionoBoton"
+            android:text="0" />
 
         <Button
 
@@ -228,16 +226,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@android:color/darker_gray"
-            android:text="."
-            android:onClick="presionoBoton" />
+            android:onClick="presionoBoton"
+            android:text="." />
 
         <Button
 
             android:id="@+id/btn_Igual"
-            android:layout_width="wrap_content"
+            android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
+            android:backgroundTint="@color/teal_700"
             android:text="=" />
 
     </LinearLayout>
